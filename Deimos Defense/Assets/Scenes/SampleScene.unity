@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -466,6 +466,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &174694153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4720479600825812466, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+  m_PrefabInstance: {fileID: 7093882508267944655}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &377633055
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,6 +597,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &680191089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5997080861752171844, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+  m_PrefabInstance: {fileID: 7093882508267944655}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,6 +1281,50 @@ PrefabInstance:
     - target: {fileID: 1513259586203915648, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
       propertyPath: m_Name
       value: Player Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383100385063329261, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: fire.m_Id
+      value: 85053a7f-24ae-4fb7-a00f-5733e3201e0d
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383100385063329261, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: fire.m_Name
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383100385063329261, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: controlRollFactor
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383100385063329261, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383100385063329261, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: controlPitchFactor
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383100385063329261, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 680191089}
+    - target: {fileID: 3383100385063329261, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 174694153}
+    - target: {fileID: 3383100385063329261, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383100385063329261, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 606117a5-569f-4207-babd-4e1558ce8087
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383100385063329261, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/f
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383100385063329261, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: fire.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Fire
       objectReference: {fileID: 0}
     - target: {fileID: 3822472094886826430, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
       propertyPath: m_RootOrder

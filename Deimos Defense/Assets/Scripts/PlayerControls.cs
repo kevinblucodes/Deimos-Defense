@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,15 +6,25 @@ using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
+    
     [SerializeField] InputAction movement;
-    [SerializeField] float controlSpeed = 10f;
-    [SerializeField] float xRange = 4.2f;
-    [SerializeField] float yRange = 3.4f;
-    [SerializeField] float controlPitchFactor = -7f;
+    [SerializeField] InputAction fire;
 
-    [SerializeField] float positionPitchFactor = -5f;
-    [SerializeField] float positionYawFactor = -5f;
-    [SerializeField] float controlRollFactor = 5f;
+    [Header("General Setup Settings")]
+    [Tooltip("How fast ship moves based on player input")][SerializeField] float controlSpeed = 10f;
+    [Tooltip("Horizontal ship distance limit from screen center")][SerializeField] float xRange = 4.2f;
+    [Tooltip("Vertical ship distance limit from screen center")][SerializeField] float yRange = 3.4f;
+    [Tooltip("Controls how much ship pitch changes based on player input")][SerializeField] float controlPitchFactor = -7f;
+
+
+    [Tooltip("Controls how much ship pitch changes based on screen position")][SerializeField] float positionPitchFactor = -5f;
+
+    [Tooltip("Controls how much ship pitch changes based on player input")][SerializeField] float controlRollFactor = 5f;
+    [Tooltip("Controls how much ship yaw changes based on screen position")][SerializeField] float positionYawFactor = -5f;
+
+    [SerializeField] GameObject[] lasers;
+
+
 
     float xThrow;
     float yThrow;
@@ -26,11 +37,13 @@ public class PlayerControls : MonoBehaviour
    void OnEnable()
     {
         movement.Enable();
+        fire.Enable();
     }
 
    void OnDisable()
     {
         movement.Disable();
+        fire.Disable();
     }
 
     // Update is called once per frame
@@ -38,6 +51,7 @@ public class PlayerControls : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
+        ProcessFiring();
 
     }
 
@@ -68,4 +82,26 @@ public class PlayerControls : MonoBehaviour
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
     }
+
+    void ProcessFiring()
+    {
+        if (fire.ReadValue<float>() > 0.5f)
+        {
+            SetLasersActive(true);
+        }
+        else 
+        {
+            SetLasersActive(false);
+        }
+    }
+
+    void SetLasersActive(bool isActive)
+    {
+        foreach (GameObject laser in lasers)
+        {
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
+        }
+    }
+
 }
