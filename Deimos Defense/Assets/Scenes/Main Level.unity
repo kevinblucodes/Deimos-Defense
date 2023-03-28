@@ -262,6 +262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead739de5d0c6414393ee3230d62ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 8002628945644881386, guid: 3d7282693cfeda74c9953eb9b2466779, type: 3}
+  parent: {fileID: 990467121}
 --- !u!1 &137874165
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +403,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead739de5d0c6414393ee3230d62ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 8002628945644881386, guid: 3d7282693cfeda74c9953eb9b2466779, type: 3}
+  parent: {fileID: 990467121}
 --- !u!1 &158832463
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead739de5d0c6414393ee3230d62ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 8002628945644881386, guid: 3d7282693cfeda74c9953eb9b2466779, type: 3}
+  parent: {fileID: 990467121}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +870,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead739de5d0c6414393ee3230d62ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 8002628945644881386, guid: 3d7282693cfeda74c9953eb9b2466779, type: 3}
+  parent: {fileID: 990467121}
+--- !u!1 &990467120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990467121}
+  m_Layer: 0
+  m_Name: Spawn At Runtime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &990467121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990467120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1031741567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,6 +1042,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead739de5d0c6414393ee3230d62ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 8002628945644881386, guid: 3d7282693cfeda74c9953eb9b2466779, type: 3}
+  parent: {fileID: 990467121}
 --- !u!1 &1266880397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead739de5d0c6414393ee3230d62ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 8002628945644881386, guid: 3d7282693cfeda74c9953eb9b2466779, type: 3}
+  parent: {fileID: 990467121}
 --- !u!95 &1616125834 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4954496298278127484, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
@@ -1456,6 +1499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead739de5d0c6414393ee3230d62ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 8002628945644881386, guid: 3d7282693cfeda74c9953eb9b2466779, type: 3}
+  parent: {fileID: 990467121}
 --- !u!1001 &7093882508267944655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1467,10 +1512,6 @@ PrefabInstance:
     - target: {fileID: 1513259586203915648, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
       propertyPath: m_Name
       value: Player Rig
-      objectReference: {fileID: 0}
-    - target: {fileID: 2124307755291942728, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3822472094886826430, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
       propertyPath: m_RootOrder
@@ -1516,21 +1557,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3945812171108105228, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
-      propertyPath: m_Mass
-      value: 0.0000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3945812171108105228, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3945812171108105228, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3945812171108105228, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
+    - target: {fileID: 4455928069697715845, guid: 743dab31f44f6fa4387893e79cc1ac32, type: 3}
+      propertyPath: m_Name
+      value: Player Explosion VFX
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
